@@ -1,0 +1,54 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 100px;
+    background-color: #F0F2F5;
+    color: white;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.cell {
+    flex-basis: calc(100% / 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border: 1px solid lightgreen;
+    color: black;
+}
+
+
+.bg-azure {
+    background-color: aqua;
+}
+
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+button { 
+    padding: 10px;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 999px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
