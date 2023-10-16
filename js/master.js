@@ -1,7 +1,5 @@
 // COSTANTI K:
 
-
-
 const MAX_NUMBER_OF_BOMBS = 16;
 
 // FUNCTIONS AND COMPONENTS OF FUNCTIONS :
@@ -68,12 +66,18 @@ startGameBtnDOMElement.addEventListener('click', function (){
 
         let currentCelllElement = cellDOMElement[i]
 
-        currentCelllElement.addEventListener ('click', function() {
+        currentCelllElement.addEventListener ('click', function(event) {
+            const target = event.target;
+            // console.log(target.classList.contains('bg-azure'));
 
             console.log('You Clicked on number:' + currentCelllElement.innerHTML)
 
-            counter = counter + 1 
-            console.log (counter)
+            if (target.classList.contains('bg-azure')) {
+                counter = counter 
+                // console.log (counter)
+            } else {
+                counter = counter + 1 
+            }
 
             counterDOMElement.innerHTML = " " + counter
 
