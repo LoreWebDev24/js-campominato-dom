@@ -47,7 +47,7 @@ startGameBtnDOMElement.addEventListener('click', function (){
     gameGridDOMElement.innerHTML = ''
 
     let bombe = getRandomArrayOfInts(1,100,MAX_NUMBER_OF_BOMBS)
-    console.log (bombe)
+    // console.log (bombe)
 
     for (let i = 0; i < 100 ; i++) {
 
