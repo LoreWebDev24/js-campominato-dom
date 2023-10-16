@@ -30,6 +30,9 @@ gameGridDOMElement = document.querySelector('.game-grid')
 startGameBtnDOMElement = document.getElementById('start-game')
 // console.log(startGameBtnDOMElement)
 
+messageLoseDOMElement = document.querySelector('.message-lose')
+
+
 
 startGameBtnDOMElement.addEventListener('click', function (){
 
@@ -57,10 +60,19 @@ startGameBtnDOMElement.addEventListener('click', function (){
 
         currentCelllElement.addEventListener ('click', function() {
 
-            currentCelllElement.classList.add('bg-azure')
-
             console.log('You Clicked on number:' + currentCelllElement.innerHTML)
 
+            let cellNumber = parseInt(currentCelllElement.innerHTML)
+
+            if (bombe.includes(cellNumber)) {
+                currentCelllElement.classList.add('bg-red')
+                gameGridDOMElement.classList.add('cursor-none')
+                messageLoseDOMElement.classList.add('d-block')
+            }
+            else {
+                currentCelllElement.classList.add('bg-azure')
+            }
+            
         })
     }
 })

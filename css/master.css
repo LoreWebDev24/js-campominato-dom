@@ -5,9 +5,10 @@
 }
 
 body {
-    padding: 100px;
+    padding: 60px;
     background-color: #F0F2F5;
     color: white;
+    height: 100vh;
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 80px;
     border: 1px solid lightgreen;
     color: black;
 }
@@ -36,10 +37,18 @@ body {
     background-color: aqua;
 }
 
+.bg-red {
+    background-color: red;
+}
+
 
 .button-wrapper {
     display: flex;
     justify-content: center;
+}
+
+.cursor-none {
+    pointer-events: none;
 }
 
 
@@ -51,4 +60,17 @@ button {
     color: white;
     font-weight: bold;
     cursor: pointer;
+}
+
+.message-lose {
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    top: 10%;
+}
+
+.d-block {
+    display: block;
 }
