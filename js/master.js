@@ -1,5 +1,6 @@
-// FUNCTIONS AND COMPONENTS OF FUNCTIONS :
+const MAX_NUMBER_OF_BOMBS = 16;
 
+// FUNCTIONS AND COMPONENTS OF FUNCTIONS :
 
 function getRandomIntInclusive(min, max) {
 	min = Math.ceil(min)
@@ -12,12 +13,11 @@ function getRandomArrayOfInts (minRange, maxRange, number) {
 
     while (bombArray.length < number) {
         const n = getRandomIntInclusive(minRange,maxRange)
-    }
 
-    if (!bombArray.includes(n)) {
-        bombArray.push(n)
+        if (!bombArray.includes(n)) {
+            bombArray.push(n)
+        }
     }
-
 
     return bombArray
 }
@@ -31,12 +31,11 @@ startGameBtnDOMElement = document.getElementById('start-game')
 // console.log(startGameBtnDOMElement)
 
 
-
 startGameBtnDOMElement.addEventListener('click', function (){
 
     gameGridDOMElement.innerHTML = ''
 
-    let bombe = getRandomArrayOfInts(1,100,16)
+    let bombe = getRandomArrayOfInts(1,100,MAX_NUMBER_OF_BOMBS)
     console.log (bombe)
 
     for (let i = 0; i < 100 ; i++) {
