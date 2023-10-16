@@ -1,3 +1,7 @@
+// COSTANTI K:
+
+
+
 const MAX_NUMBER_OF_BOMBS = 16;
 
 // FUNCTIONS AND COMPONENTS OF FUNCTIONS :
@@ -32,9 +36,15 @@ startGameBtnDOMElement = document.getElementById('start-game')
 
 messageLoseDOMElement = document.querySelector('.message-lose')
 
+messageWinDOMElement = document.querySelector('.message-win')
+
+counterDOMElement = document.getElementById('counter')
+
 
 
 startGameBtnDOMElement.addEventListener('click', function (){
+
+    let counter = 0
 
     gameGridDOMElement.innerHTML = ''
 
@@ -62,6 +72,11 @@ startGameBtnDOMElement.addEventListener('click', function (){
 
             console.log('You Clicked on number:' + currentCelllElement.innerHTML)
 
+            counter = counter + 1 
+            console.log (counter)
+
+            counterDOMElement.innerHTML = " " + counter
+
             let cellNumber = parseInt(currentCelllElement.innerHTML)
 
             if (bombe.includes(cellNumber)) {
@@ -71,6 +86,11 @@ startGameBtnDOMElement.addEventListener('click', function (){
             }
             else {
                 currentCelllElement.classList.add('bg-azure')
+            }
+
+            if (counter === 84) {
+                gameGridDOMElement.classList.add('cursor-none')
+                messageWinDOMElement.classList.add('d-block')
             }
             
         })

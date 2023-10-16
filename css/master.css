@@ -71,6 +71,23 @@ button {
     top: 10%;
 }
 
+.message-win {
+    display: none;
+    color: lightgreen;
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    top: 10%;
+}
+
+.counter {
+    font-size: 24px;
+    color: lightgreen;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5%;
+}
+
 .d-block {
     display: block;
 }
