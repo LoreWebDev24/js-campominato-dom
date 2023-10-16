@@ -1,12 +1,43 @@
+// FUNCTIONS AND COMPONENTS OF FUNCTIONS :
+
+
+function getRandomIntInclusive(min, max) {
+	min = Math.ceil(min)
+	max = Math.floor(max)
+	return Math.floor(Math.random() * (max - min + 1) + min) 
+}
+
+function getRandomArrayOfInts (minRange, maxRange, number) { 
+    const bombArray = []
+
+    while (bombArray.length < number) {
+        const n = getRandomIntInclusive(minRange,maxRange)
+    }
+
+    if (!bombArray.includes(n)) {
+        bombArray.push(n)
+    }
+
+
+    return bombArray
+}
+
+// APP JS :
+
 gameGridDOMElement = document.querySelector('.game-grid')
 // console.log(gameGridDOMElement)
 
 startGameBtnDOMElement = document.getElementById('start-game')
 // console.log(startGameBtnDOMElement)
 
+
+
 startGameBtnDOMElement.addEventListener('click', function (){
 
     gameGridDOMElement.innerHTML = ''
+
+    let bombe = getRandomArrayOfInts(1,100,16)
+    console.log (bombe)
 
     for (let i = 0; i < 100 ; i++) {
 
@@ -34,3 +65,5 @@ startGameBtnDOMElement.addEventListener('click', function (){
         })
     }
 })
+
+
