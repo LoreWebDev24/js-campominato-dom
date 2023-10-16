@@ -26,6 +26,8 @@ function getRandomArrayOfInts (minRange, maxRange, number) {
 
 // APP JS :
 
+// DOM ELEMETS:
+
 gameGridDOMElement = document.querySelector('.game-grid')
 // console.log(gameGridDOMElement)
 
@@ -38,7 +40,7 @@ messageWinDOMElement = document.querySelector('.message-win')
 
 counterDOMElement = document.getElementById('counter')
 
-
+// GRID GENERATION:
 
 startGameBtnDOMElement.addEventListener('click', function (){
 
@@ -59,6 +61,8 @@ startGameBtnDOMElement.addEventListener('click', function (){
         gameGridDOMElement.innerHTML = gameGridDOMElement.innerHTML + htmlCell
 
     }
+
+    // GESTIONE DEL BACKGROUND SULLA SINGOLA CELLA CLICCATA E CONDIZIONI DI VITTORIA :
 
     let cellDOMElement = document.querySelectorAll('.cell')
 

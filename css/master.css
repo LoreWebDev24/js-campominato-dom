@@ -62,6 +62,8 @@ button {
     cursor: pointer;
 }
 
+/* IL POSITION ABSOLUTE ROMPE VELOCEMENTE IL LAYOUT IN CASO DI RESIZE MA QUI IL FOCUS ERA SULLA LOGICA PER CUI L'HO PENSATO PER FUNZIONARE SOLO SU DESKTOP */
+
 .message-lose {
     display: none;
     color: red;
